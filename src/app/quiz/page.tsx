@@ -162,7 +162,7 @@ export default function QuizPage() {
             >
               <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl">
                 <h2 className="text-2xl font-bold text-center mb-6 text-gray-800">
-                  What's your name? 👋
+                  What&apos;s your name? 👋
                 </h2>
                 <form onSubmit={handleNameSubmit}>
                   <input

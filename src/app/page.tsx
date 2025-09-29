@@ -19,7 +19,7 @@ export default function Home() {
         await el.play();
         setIsPlaying(true);
       }
-    } catch (_) {
+    } catch {
       // no-op; user gesture or autoplay restriction
     }
   };

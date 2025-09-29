@@ -39,13 +39,6 @@ export default function VirtualPetPage() {
     return messages[state];
   };
 
-  const getPetEmoji = (state: PetState) => {
-    if (state === 'eating') return '🍎';
-    if (state === 'playing') return '🎾';
-    if (state === 'sleeping') return '😴';
-    return '🐶';
-  };
-
   const sanitize = (txt: string) => txt.replace(/[^\x20-\x7E]/g, '');
 
   const handleDragStart = (e: React.DragEvent, item: string) => {
@@ -269,7 +262,7 @@ export default function VirtualPetPage() {
           className="mt-8 bg-white/80 backdrop-blur-sm rounded-3xl p-6 shadow-xl"
         >
           <h3 className="text-xl font-bold text-gray-800 mb-4 text-center">
-            Today's Activities 📝
+            Today&apos;s Activities 📝
           </h3>
 
           {actions.length === 0 ? (

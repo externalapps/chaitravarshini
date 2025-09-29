@@ -31,15 +31,15 @@ export default function WishesPage() {
     try {
       const bg = await loadImage("/WISHES%20.png");
       // 50% opacity background
-      // @ts-ignore - jsPDF GState type
-      const gsHalf = new (doc as any).GState({ opacity: 0.5 });
-      // @ts-ignore
-      (doc as any).setGState(gsHalf);
+      // @ts-expect-error - jsPDF GState type
+      const gsHalf = new (doc as never).GState({ opacity: 0.5 });
+      // @ts-expect-error
+      (doc as never).setGState(gsHalf);
       doc.addImage(bg, "PNG", 0, 0, pageWidth, pageHeight);
       // reset opacity
-      // @ts-ignore
-      (doc as any).setGState(new (doc as any).GState({ opacity: 1 }));
-    } catch (_) {
+      // @ts-expect-error
+      (doc as never).setGState(new (doc as never).GState({ opacity: 1 }));
+    } catch {
       // If image load fails, continue without background
     }
 
