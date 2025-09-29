@@ -33,11 +33,11 @@ export default function WishesPage() {
       // 50% opacity background
       // @ts-expect-error - jsPDF GState type
       const gsHalf = new (doc as never).GState({ opacity: 0.5 });
-      // @ts-expect-error
+      // @ts-expect-error - jsPDF setGState method not in types
       (doc as never).setGState(gsHalf);
       doc.addImage(bg, "PNG", 0, 0, pageWidth, pageHeight);
       // reset opacity
-      // @ts-expect-error
+      // @ts-expect-error - jsPDF setGState method not in types
       (doc as never).setGState(new (doc as never).GState({ opacity: 1 }));
     } catch {
       // If image load fails, continue without background
