@@ -193,7 +193,10 @@ export default function VirtualPetPage() {
                   onError={(e) => {
                     // Fallback to emoji if GIF fails to load
                     e.currentTarget.style.display = 'none';
-                    e.currentTarget.nextElementSibling.style.display = 'block';
+                    const nextElement = e.currentTarget.nextElementSibling as HTMLElement;
+                    if (nextElement) {
+                      nextElement.style.display = 'block';
+                    }
                   }}
                 />
                 <div className="text-8xl hidden">
