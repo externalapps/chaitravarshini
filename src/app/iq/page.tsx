@@ -32,7 +32,7 @@ const questions: Question[] = [
   },
   {
     id: 4,
-    question: "What is the opposite of 'Ancient'?",
+    question: "What is the opposite of &apos;Ancient&apos;?",
     options: ["Old", "Modern", "Classic", "Traditional"],
     correct: 1
   },
@@ -204,7 +204,7 @@ export default function IQTestPage() {
             >
               <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl">
                 <h2 className="text-2xl font-bold text-center mb-6 text-gray-800">
-                  What's your name? 👋
+                  What&apos;s your name? 👋
                 </h2>
                 <form onSubmit={handleNameSubmit}>
                   <input
